@@ -55,7 +55,7 @@ func Write(w io.Writer, env Env, fs []Finding, brief, color bool) {
 		}
 		tag := "[" + f.Rule.Risk.String() + "]"
 		fmt.Fprintf(w, "%s %s  %s\n", c(riskColor(f.Rule.Risk)+bold, padRight(tag, 8)),
-			c(bold, size), f.Rule.Title)
+			c(bold, padLeftW(size, 9)), f.Rule.Title)
 		if brief {
 			continue
 		}
@@ -101,4 +101,11 @@ func padRight(s string, w int) string {
 		return s
 	}
 	return s + strings.Repeat(" ", w-n)
+}
+
+func padLeftW(s string, w int) string {
+	if len(s) < w && !strings.ContainsFunc(s, func(r rune) bool { return r > 0x2e80 }) {
+		return strings.Repeat(" ", w-len(s)) + s
+	}
+	return s
 }
