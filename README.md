@@ -111,7 +111,7 @@ macdust hogs            # 檢查 macOS 常見的吃空間位置（不進 TUI）
 ```
 $ macdust --top 5 ~
 掃描 387744 個檔案、121002 個資料夾，共 71.6 GB，耗時 6.21 秒；0 個項目無法讀取
-   10.7 GB  ~/Library/Application Support/Claude/vm_bundles/claudevm.bundle/rootfs.img
+   10.7 GB  ~/Library/Containers/com.docker.docker/Data/vms/0/data/Docker.raw
   679.5 MB  ~/Library/Developer/CoreSimulator/Devices/750D9CEA-.../data/private/var/MobileAsset/.../UC_SIRI_ASR_ASSISTANT_EN_US_EN_US_H18P_Cryptex.dmg
   551.6 MB  ~/Library/Developer/CoreSimulator/Devices/CD63C5A8-.../data/private/var/MobileAsset/.../UC_SIRI_ASR_ASSISTANT_EN_US_EN_US_M11_Cryptex.dmg
   ...
